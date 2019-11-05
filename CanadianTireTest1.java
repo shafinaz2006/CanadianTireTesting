@@ -140,7 +140,7 @@ public class CanadianTireTest1 {
 		
 		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 
-		ratingsRangeList =wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//li[@id = 'ratingsrange']//li")));		 
+		ratingsRangeList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//li[@id = 'ratingsrange']//li")));		 
 		
 		index = printListItemNames(ratingsRangeList, "data-analytics", ratingRange, false);
 		
@@ -148,7 +148,7 @@ public class CanadianTireTest1 {
 			
 			ratingsRangeList.get(index).click();
 			
-			productList =wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class= 'temporary-grid-item']")));
+			productList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class= 'temporary-grid-item']")));
 			
 			System.out.println("Total product with " + ratingRange + " stars: " + productList.size());
 		}
@@ -165,7 +165,7 @@ public class CanadianTireTest1 {
 	
 	public static void addProductToWishList(WebDriver driver, WebDriverWait wait) {
 		
-		productWithSavingsList =wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath
+		productWithSavingsList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath
 				("//div[@class= 'temporary-grid-item']//div[@class ='price__tag']")));
 		
 		System.out.println("Total products with savings: " + productWithSavingsList.size() );
@@ -174,7 +174,7 @@ public class CanadianTireTest1 {
 		
 		driver.navigate().refresh();
 		
-		addToCartList =wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class= 'temporary-grid-item']//span[contains(text(), 'Add To Cart')]")));
+		addToCartList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class= 'temporary-grid-item']//span[contains(text(), 'Add To Cart')]")));
 		
 		System.out.println("Total products to add to Cart: " + addToCartList.size() );
 		
